@@ -42,8 +42,10 @@ class TaskManagerTest < Minitest::Test
   end
 
   def test_update_method_updates_a_current_task
-    skip
+    # skip
     create_task
-    tasks_manag
+    task_data = { title: "new title", description: "new description" }
+    task_manager.update(current_task_id, task_data)
+    assert_equal 'new title', task_manager.find(current_task_id).title
   end
 end

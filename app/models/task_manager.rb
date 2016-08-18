@@ -33,11 +33,11 @@ class TaskManager
   end
 
   def update(id, task_data)
-    database.transaction do
-      task = database["tasks"].find { |data| data["id"] == id }
-      task["title"] = task_data[:title]
-      task["description"] = task_data[:description]
-    end
+    database.execute("UPDATE tasks SET 
+                      title = '#{task_data[:title]}',
+                      description = '#{task_data[:description]}'
+                      WHERE id = '#{id}';"
+                    )
   end
 
   def destroy(id)
