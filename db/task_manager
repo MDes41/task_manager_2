@@ -1,12 +1,16 @@
 ---
 tasks:
-- id: 1
-  title: test
-  decription: "testing\r\n"
 - id: 4
   title: this is a new test 3
   decription: "Task 3\r\n"
+  description: d
 - id: 6
   title: test
   description: this is a test
-total: 6
+- id: 7
+  title: New
+  description: New task
+- id: 8
+  title: Description
+  description: d
+total: 8
